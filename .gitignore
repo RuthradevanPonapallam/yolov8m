@@ -40,3 +40,10 @@ __pycache__
 # Environment
 .env
 .env.*
+
+# Large unused models
+yolov8l.pt
+yolov8m.pt
+yolov8x.pt
+yolov8x-oiv7.pt
+yolov8n-oiv7.pt
