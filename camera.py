@@ -30,7 +30,14 @@ DEFAULT_COLOR = (255, 0, 0) # Blue
 class VideoCamera:
     def __init__(self, source=0):
         # Initialize Video Capture
-        self.video = cv2.VideoCapture(source)
+        try:
+            self.video = cv2.VideoCapture(source)
+            if not self.video.isOpened():
+                print("Warning: Could not open video source.")
+                self.video = None
+        except Exception as e:
+            print(f"Error opening video source: {e}")
+            self.video = None
         
         # Load Models
         # Using the Model 3 path from original script as primary, fallback to yolov8n
@@ -149,6 +156,13 @@ class VideoCamera:
         return img
 
     def get_frame(self):
+        if self.video is None:
+            # Create a black image
+            img = np.zeros((480, 640, 3), dtype=np.uint8)
+            cv2.putText(img, "Camera Unavailable (Server Mode)", (50, 240), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+            ret, jpeg = cv2.imencode('.jpg', img)
+            return jpeg.tobytes()
+
         success, img = self.video.read()
         if not success:
             return None
