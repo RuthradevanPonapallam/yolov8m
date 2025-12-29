@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 13
+names: ['bird', 'car', 'manhole', 'pedestrian', 'person', 'pothole', 'road crack', 'road damage', 'rubbish', 'traffic light', 'truck', 'van', 'wheel']
+
+roboflow:
+  workspace: psm-1-oaeeg
+  project: self-driving-rsnzb
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/psm-1-oaeeg/self-driving-rsnzb/dataset/1

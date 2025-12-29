@@ -1,0 +1,7 @@
+{
+  "name": "VisionDrive AI Dashboard",
+  "description": "A sophisticated real-time object detection and hazard monitoring dashboard for autonomous vehicles, featuring Malaysia-specific road hazard detection and automated alerts.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['car', 'manhole', 'pedestrian', 'person', 'speedbump', 'wheel']
+
+roboflow:
+  workspace: psm-1-oaeeg
+  project: self-driving-malaysia-pmewj
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/psm-1-oaeeg/self-driving-malaysia-pmewj/dataset/1

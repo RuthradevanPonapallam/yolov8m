@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['arrow traffic sign', 'bus', 'car', 'cone', 'pedestrian', 'traffic light', 'wheel']
+
+roboflow:
+  workspace: psm-1-oaeeg
+  project: self-driving-night-o25mu
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/psm-1-oaeeg/self-driving-night-o25mu/dataset/2
