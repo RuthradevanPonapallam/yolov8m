@@ -12,7 +12,7 @@ camera = VideoCamera(0) # 0 for Webcam
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return jsonify({"status": "Backend is running", "service": "YOLOv8 API"})
 
 def gen(camera):
     while True:
