@@ -1,3 +1,7 @@
+# CPU version of torch to save space (Azure Web App is CPU only)
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+
 flask
 flask-cors
 ultralytics
